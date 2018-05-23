@@ -13,8 +13,7 @@ puts "=========================================="
 puts "Please rate comedy from 1 to 5"
 comedy_input = gets.chomp
 puts "=========================================="
-puts "Please rate dramedy from 1 to 5"
-dramedy_input = gets.chomp
+
 
 puts ""
 puts ""
@@ -26,12 +25,11 @@ puts "======================="
 puts "documentary: #{documentary_input}"
 puts "drama:       #{drama_input}"
 puts "comedy:      #{comedy_input}"
-puts "dramedy:     #{dramedy_input}"
 puts ""
 puts ""
 puts "=========================================="
 
- return documentary_input, drama_input, comedy_input, dramedy
+ return documentary_input, drama_input, comedy_input
 end
 
 def rating(documentary_input, drama_input, comedy_input,dramedy, documentary, drama, comedy, dramedy)
