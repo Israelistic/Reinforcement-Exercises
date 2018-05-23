@@ -32,7 +32,7 @@ puts "=========================================="
  return documentary_input, drama_input, comedy_input
 end
 
-def rating(documentary_input, drama_input, comedy_input,dramedy, documentary, drama, comedy, dramedy)
+def rating(documentary_input, drama_input, comedy_input, documentary, drama, comedy, dramedy)
 
     if documentary_input > 4 && drama_input < 4 && comedy_input < 4
 
