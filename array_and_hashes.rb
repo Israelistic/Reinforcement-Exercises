@@ -171,9 +171,9 @@ puts
 p "Exercise 6.1"
 
 new_movies = {
-"1999" => ["The Matrix", "Star Wars: Episode 1", "The Mummy"],
-"2009" => ["Avatar", "Star Trek", "District 9"],
-"2019"=> ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]
+    "1999" => ["The Matrix", "Star Wars: Episode 1", "The Mummy"],
+    "2009" => ["Avatar", "Star Trek", "District 9"],
+    "2019"=> ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]
 }
 p new_movies
 
@@ -185,3 +185,31 @@ phone_pad4 = ["*",0,"#"]
 phone_pad = [phone_pad1,phone_pad2, phone_pad3, phone_pad4]
 p phone_pad.join
 p "Exercise 6.3"
+countries =[
+    {country: "Australia", island: true, continent: false},
+    {country:"England", island: true, continent: false},
+    {country:"USA",  island: false, continent: true }
+]
+puts
+p "Exercise 7"
+puts
+p "Exercise 7.1"
+20.times do
+    p "I will not skateboard in the halls"
+end
+
+p "Exercise 7.2"
+messages =[]
+20.times do
+    messages <<  "I will not skateboard in the halls"
+end
+p messages
+p "Exercise 7.3"
+
+numbers=[]
+51.times do | counter |
+    numbers << counter
+end
+p numbers
+# array = ('0'..'49').to_a
+p "Exercise 7.3"
