@@ -41,15 +41,17 @@ city_pop = {
 
 }
 #exercise 0.4
-famfriend_name_age ={
-
-
-
- friends: { jeff:  35, kevin:  29, steven:  29, bibek:  30, inbar:  28, eden:  18, josh:  16 }
-
+fam_friend_nameage ={
+    jeff:  35,
+    kevin:  29,
+    steven:  29,
+    bibek:  30,
+    inbar:  28,
+    eden:  18,
+    josh:  16
 
 }
-famfriend_name_age[:friends][:jeff]
+
 puts
 puts
 p "===Exercise 1==="
@@ -135,3 +137,51 @@ p " #{city} population is #{pop}"
 
 end
 puts "the to total population of  the cities #{sum_pop}"
+
+
+p "Exercise 5.2"
+
+p fam_friend_nameage
+
+fam_friend_nameage.each do | name, age |
+
+    if age < 32
+        p "#{name} is younger then me"
+    else
+     p "#{name} is old and wise"
+    end
+end
+
+p "Exercise 5.3"
+p fav_colours[-2..-1]
+
+p "Exercise 5.4"
+age.each do | element |
+    new_age = element + 1
+    p new_age
+end
+
+p "Exercise 5.4"
+fav_colours << "yellow"
+fav_colours << "red"
+p fav_colours
+puts
+p "Exercise 6"
+puts
+p "Exercise 6.1"
+
+new_movies = {
+"1999" => ["The Matrix", "Star Wars: Episode 1", "The Mummy"],
+"2009" => ["Avatar", "Star Trek", "District 9"],
+"2019"=> ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]
+}
+p new_movies
+
+p "Exercise 6.2"
+phone_pad1 = [1,2,3]
+phone_pad2 = [4,5,6]
+phone_pad3 = [7,8,9]
+phone_pad4 = ["*",0,"#"]
+phone_pad = [phone_pad1,phone_pad2, phone_pad3, phone_pad4]
+p phone_pad.join
+p "Exercise 6.3"
