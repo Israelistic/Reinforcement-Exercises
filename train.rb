@@ -23,43 +23,27 @@ train610direction = ""
 
      end
 end
+
 p train111direction
 p frequency_80B
 p train610direction
 
-north_trains = []
-trains.each do |train|
+def train_direction(trains, direction)
+     trains_direction=[]
+     trains.each do |train|
 
-     if train[:direction] == "north"
-          north_trains << train[:train]
+          if train[:direction] == direction
+
+               trains_direction << train[:train]
+          end
      end
+    return trains_direction
 end
-p north_trains
+p "enter the direction you want to travel"
+direction = gets.chomp.to_s
 
-east_trains = []
-trains.each do |train|
+p  train_direction(trains, direction)
 
-     if train[:direction] == "east"
-          east_trains << train[:train]
-     end
-end
-p east_trains
 
-# train_direction01 = "0"
-# frequency_80B = "0"
-# trains[]
-# trains.each do |train|      # array of hashes
-#   #p train[:direction]
-#      train.each do |k,v| # train
-#        puts "#{k} => #{v}"
-#        #
-#        # end
-#
-#   end
-# #
-# trains.each do |train|
-#   p train{:train}
-# end
-# puts
-# puts
-# p trains
+trains[0][:first_departure_time] = 6
+p trains
