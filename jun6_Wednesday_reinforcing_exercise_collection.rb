@@ -1,4 +1,4 @@
-{ data: { rooms:
+ rooms = { data: { rooms:
     [ { id: 1, room_number: "201", capacity: 50}, { id: 2, room_number: "301", capacity: 200 }, { id: 3, room_number: "1B", capacity: 100}
     ],
     events: [
@@ -9,3 +9,28 @@
     ]
   }
 }
+ #Retrieve the capacity of room 201 and store it in a variable.
+
+ room_201_cpacity = rooms[:data][:rooms][0][:capacity]
+p room_201_cpacity
+#Find all the events taking place in room 201. Iterate through them and
+#print "ok" if the number of planned attendees will fit in the room.
+rooms[:data][:events].each do | event |
+  if event[:room_id] == 1
+      if event[:attendees] > room_201_cpacity
+       "you cannot book this room"
+      else
+       p "Ok"
+      end 
+  end
+end
+
+# rooms[:data][:events].each do |event|
+#   if event[:room_id] == room_201_cpacity
+#     if event[:attendees] > rooms[:data][:rooms][0][:capacity]
+#       p "Over capacity!"
+#     else
+#       p 'OK!'
+#     end
+#   end
+# end
