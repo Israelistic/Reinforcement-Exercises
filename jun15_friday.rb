@@ -18,3 +18,4 @@ sitter.each_with_index do | items, index |
     end
   end
 p sitter
+hashs.each_with_index do | hash, voter|

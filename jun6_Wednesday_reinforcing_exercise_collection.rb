@@ -21,16 +21,6 @@ rooms[:data][:events].each do | event |
        "you cannot book this room"
       else
        p "Ok"
-      end 
+      end
   end
 end
-
-# rooms[:data][:events].each do |event|
-#   if event[:room_id] == room_201_cpacity
-#     if event[:attendees] > rooms[:data][:rooms][0][:capacity]
-#       p "Over capacity!"
-#     else
-#       p 'OK!'
-#     end
-#   end
-# end
