@@ -104,7 +104,40 @@ isHosted: false
 ]}
 }
 
-articles[:response][:results].each do | article |
-      article[:views] = 0
+
+=begin
+Add another key-value pair to each article where the key is "views" and the value is 0.
+
+Write a method called read_article that randomly selects an article and increases the articles "views" by one each time it's randomly selected.
+Write a method called display_views that iterates through the articles and displays their titles and view counts, like so:
+Try calling read_article several times and then display_views to verify that your code works.
+=end
+articles_array = articles[:response][:results]
+
+def add_key_and_value_to_results(articles)
+      articles.each do | article |
+            article[:views] = 0
+      end
+      return articles
 end
-ap articles
+
+ ap add_key_and_value_to_results(articles_array)
+
+
+
+def read_articles(articles_array)
+      rand_articles = articles_array.sample
+      rand_articles[:views] += 1
+      return rand_articles
+end
+
+
+
+ 20.times do
+  ap read_articles(articles_array)
+end
+
+
+articles_array.each do |article|
+		p "Article: #{article[:webTitle]}  number of views: #{article[:views]}"
+	end
