@@ -18,12 +18,13 @@ class Trip
     end
     def trip_log
      p "Began Trip"
-     p "Travelled from #{@destinations[0]} to #{@destinations[1]}"
-     counter = @destinations.length - 2
-     counter.times do |i|
-    p "Travelled #{@destinations[i+1]} to #{@destinations[i+2]} "
-end
-         p "Ended Trip."
+        @destinations.each_with_index do |destination, index|
+            if @destinations[index+1]!= nil
+                p "#{destination} to  #{@destinations[index+1]}"
+            else
+               p "Ended Trip."
+            end    
+        end
     end
 
 end
